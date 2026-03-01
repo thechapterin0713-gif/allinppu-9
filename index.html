@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>올인뿌 9기 | 2026 상반기 GSAT/SKCT 스터디 — 더챕터인적성</title>
+  <meta name="description" content="출제위원 현직자가 직접 운영하는 GSAT/SKCT 3주 집중 스터디. 개인별 진단 & 1:1 피드백으로 고득점 달성. 올인뿌 9기 사전 모집 중.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              50: '#f0f4fa',
+              100: '#dce4f2',
+              200: '#b8c9e5',
+              300: '#8aa7d4',
+              400: '#5c82bf',
+              500: '#3d64a8',
+              600: '#1B3A6B',
+              700: '#162f56',
+              800: '#112342',
+              900: '#0c182d',
+            },
+            sky: {
+              accent: '#3478F6',
+              light: '#EBF3FF',
+              muted: '#F5F8FF',
+            },
+            gold: {
+              400: '#F5C542',
+              500: '#E5AD1A',
+            }
+          },
+          fontFamily: {
+            display: ['"Noto Sans KR"', 'sans-serif'],
+            body: ['"Pretendard"', '"Noto Sans KR"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+      font-family: 'Pretendard';
+      src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+    }
+    * { font-family: 'Pretendard', 'Noto Sans KR', sans-serif; }
+    html { scroll-behavior: smooth; }
+
+    .gradient-hero {
+      background: linear-gradient(135deg, #f0f4fa 0%, #EBF3FF 50%, #dce4f2 100%);
+    }
+    .card-shadow {
+      box-shadow: 0 4px 24px rgba(27, 58, 107, 0.08), 0 1px 4px rgba(27, 58, 107, 0.04);
+    }
+    .card-shadow-hover {
+      box-shadow: 0 8px 40px rgba(27, 58, 107, 0.14), 0 2px 8px rgba(27, 58, 107, 0.06);
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #3478F6 0%, #1B3A6B 100%);
+      transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn-primary:hover {
+      transform: scale(1.03);
+      box-shadow: 0 8px 32px rgba(52, 120, 246, 0.35);
+    }
+    .btn-primary:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(52, 120, 246, 0.4);
+    }
+    .btn-primary:active {
+      transform: scale(0.98);
+    }
+
+    .testimonial-card {
+      background: white;
+      border-left: 4px solid #3478F6;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(27, 58, 107, 0.12);
+    }
+
+    .feature-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .week-card {
+      border-left: 4px solid transparent;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .week-card:hover {
+      border-left-color: #3478F6;
+      transform: translateX(4px);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .badge-pulse {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.7; }
+    }
+
+    .schedule-row {
+      transition: transform 0.15s ease;
+    }
+    .schedule-row:hover {
+      transform: scale(1.01);
+    }
+
+    .price-highlight {
+      background: linear-gradient(to right, transparent 0%, #EBF3FF 50%, transparent 100%);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-body">
+
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md z-50 border-b border-navy-100/50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <img src="./brand_logo/스크린샷 2026-02-27 오전 11.44.36.png" alt="더챕터인적성 로고" class="h-9 sm:h-10">
+      <a href="https://geekus.kr/thechapterin/classroom/409" target="_blank"
+         class="btn-primary text-white text-sm font-semibold px-5 py-2.5 rounded-lg">
+        신청하기
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="gradient-hero pt-28 sm:pt-32 pb-16 sm:pb-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 bg-white rounded-full px-4 py-2 card-shadow mb-6">
+        <span class="badge-pulse inline-block w-2 h-2 bg-sky-accent rounded-full"></span>
+        <span class="text-sm font-semibold text-navy-600">사전 모집 중 · 2/18 ~ 3/3</span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-navy-800 leading-tight mb-5">
+        인적성은 빠르게 푸는 시험이<br class="hidden sm:block"> 아닙니다
+      </h1>
+      <p class="text-lg sm:text-xl text-navy-500 leading-relaxed mb-4 max-w-2xl mx-auto">
+        내가 풀 수 있는 최대한의 문제를<br class="sm:hidden">
+        <strong class="text-navy-700">정답률 높게 맞추는 시험</strong>이에요.
+      </p>
+      <p class="text-base text-navy-400 mb-10 max-w-xl mx-auto">
+        출제위원 현직자가 직접 운영하는 3주 집중 스터디<br>
+        개인별 진단 &amp; 1:1 맞춤 피드백
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+        <a href="https://geekus.kr/thechapterin/classroom/409" target="_blank"
+           class="btn-primary w-full sm:w-auto text-white text-lg font-bold px-10 py-4 rounded-xl">
+          올인뿌 9기 신청하기
+        </a>
+        <a href="#curriculum"
+           class="w-full sm:w-auto text-navy-500 text-base font-medium px-8 py-4 rounded-xl border border-navy-200 bg-white hover:bg-navy-50 hover:border-navy-300 focus:outline-none focus:ring-2 focus:ring-sky-accent/40 active:scale-[0.98] transition-all duration-200">
+          커리큘럼 보기
+        </a>
+      </div>
+
+      <p class="mt-6 text-sm text-navy-400">
+        ⚠️ 인원 제한 · 매 기수 빠르게 마감
+      </p>
+    </div>
+  </section>
+
+  <!-- Problem Section -->
+  <section class="py-16 sm:py-24 bg-white fade-in">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-navy-800 mb-4">
+          학원과 인강의 한계
+        </h2>
+        <p class="text-navy-500 text-base sm:text-lg">
+          시중의 학원, 인강에서는 "빠르게 푸는 방법"만 알려주고<br>
+          <strong class="text-navy-700">개별 진단은 해주지 않는 게 현실</strong>이에요.
+        </p>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2">
+        <div class="bg-red-50/80 rounded-2xl p-6 border border-red-100">
+          <div class="text-red-500 font-bold text-sm mb-2">기존 방식</div>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✕</span> 획일적인 커리큘럼</li>
+            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✕</span> 빠르게 푸는 스킬만 강조</li>
+            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✕</span> 개인 취약점 진단 없음</li>
+            <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5">✕</span> 실전 피드백 부재</li>
+          </ul>
+        </div>
+        <div class="bg-sky-light rounded-2xl p-6 border border-sky-accent/10">
+          <div class="text-sky-accent font-bold text-sm mb-2">올인뿌</div>
+          <ul class="space-y-2 text-gray-700 text-sm">
+            <li class="flex items-start gap-2"><span class="text-sky-accent mt-0.5">✓</span> 개인별 맞춤 커리큘럼</li>
+            <li class="flex items-start gap-2"><span class="text-sky-accent mt-0.5">✓</span> 정답률 극대화 전략</li>
+            <li class="flex items-start gap-2"><span class="text-sky-accent mt-0.5">✓</span> 유형별 취약점 정밀 진단</li>
+            <li class="flex items-start gap-2"><span class="text-sky-accent mt-0.5">✓</span> 매일 1:1 코칭 피드백</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 sm:py-24 bg-sky-muted fade-in">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-navy-800 mb-3">
+          수강생 실제 후기
+        </h2>
+        <p class="text-navy-400 text-sm">실제 올인뿌 수강생들의 이야기입니다</p>
+      </div>
+
+      <div class="grid gap-6">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card rounded-2xl p-6 sm:p-8 card-shadow">
+          <p class="text-gray-700 text-base sm:text-lg leading-relaxed mb-4">
+            "올인뿌를 안했다면 <strong class="text-navy-700">합격하지 못했을 것 같다</strong>고 말씀드리고 싶습니다."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-navy-100 flex items-center justify-center text-navy-600 font-bold text-sm">4기</div>
+            <div>
+              <p class="font-semibold text-navy-700 text-sm">4기 수강생</p>
+              <p class="text-sky-accent text-xs font-medium">48점 고득점 달성</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card rounded-2xl p-6 sm:p-8 card-shadow">
+          <p class="text-gray-700 text-base sm:text-lg leading-relaxed mb-4">
+            "시험날 <strong class="text-navy-700">45/50</strong>을 찍고 직무에서 <strong class="text-navy-700">상위 4%</strong>에 들어 맘편하게 면접 준비합니다.
+            취업준비를 하며 <strong class="text-navy-700">가장 잘 한 일</strong> 같습니다."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-navy-100 flex items-center justify-center text-navy-600 font-bold text-sm">7기</div>
+            <div>
+              <p class="font-semibold text-navy-700 text-sm">7기 수강생</p>
+              <p class="text-sky-accent text-xs font-medium">45/50, 직무 상위 4%</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card rounded-2xl p-6 sm:p-8 card-shadow">
+          <p class="text-gray-700 text-base sm:text-lg leading-relaxed mb-4">
+            "3주 빡세게 하면 지사트 끝나고 <strong class="text-navy-700">허탈이 아니라 행복한 웃음</strong>을 짓게 해줍니다."
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-navy-100 flex items-center justify-center text-navy-600 font-bold text-sm">7기</div>
+            <div>
+              <p class="font-semibold text-navy-700 text-sm">7기 수강생</p>
+              <p class="text-sky-accent text-xs font-medium">26개 → 40개 성장</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features / What's Included -->
+  <section class="py-16 sm:py-24 bg-white fade-in">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-navy-800 mb-3">
+          올인뿌에서 제공하는 것
+        </h2>
+        <p class="text-navy-400 text-base">299,000원에 이 모든 것이 포함됩니다</p>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div class="feature-card bg-sky-muted rounded-2xl p-6 card-shadow">
+          <div class="w-12 h-12 rounded-xl bg-sky-light flex items-center justify-center text-2xl mb-4">🎯</div>
+          <h3 class="font-bold text-navy-700 mb-2">개인별 진단 &amp; 커리큘럼</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">진단 테스트 후 올인 LV별 맞춤 로드맵을 제공합니다.</p>
+        </div>
+
+        <div class="feature-card bg-sky-muted rounded-2xl p-6 card-shadow">
+          <div class="w-12 h-12 rounded-xl bg-sky-light flex items-center justify-center text-2xl mb-4">💬</div>
+          <h3 class="font-bold text-navy-700 mb-2">매일 1:1 피드백</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">틀린 이유와 개선 방법을 꼼꼼히 코칭해드립니다.</p>
+        </div>
+
+        <div class="feature-card bg-sky-muted rounded-2xl p-6 card-shadow">
+          <div class="w-12 h-12 rounded-xl bg-sky-light flex items-center justify-center text-2xl mb-4">📝</div>
+          <h3 class="font-bold text-navy-700 mb-2">실전 모의고사</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">더챕터인 모의고사 + 해설강의를 제공합니다.</p>
+        </div>
+
+        <div class="feature-card bg-sky-muted rounded-2xl p-6 card-shadow">
+          <div class="w-12 h-12 rounded-xl bg-sky-light flex items-center justify-center text-2xl mb-4">🎬</div>
+          <h3 class="font-bold text-navy-700 mb-2">91강 VOD</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">정가 219,000원 상당 전체 강의 제공<br><span class="text-xs text-navy-400">(시스템 상 200원 추가 결제 필요)</span></p>
+        </div>
+
+        <div class="feature-card bg-sky-muted rounded-2xl p-6 card-shadow">
+          <div class="w-12 h-12 rounded-xl bg-sky-light flex items-center justify-center text-2xl mb-4">📊</div>
+          <h3 class="font-bold text-navy-700 mb-2">학습지 &amp; 진단표</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">자료해석·계산력 학습지 + 유형별 진단표 제공</p>
+        </div>
+
+        <div class="feature-card bg-sky-muted rounded-2xl p-6 card-shadow">
+          <div class="w-12 h-12 rounded-xl bg-sky-light flex items-center justify-center text-2xl mb-4">🔥</div>
+          <h3 class="font-bold text-navy-700 mb-2">마인드 &amp; 동기부여</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">아침 확언, 열품타 스터디방 초대로 몰입 환경 조성</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Curriculum -->
+  <section id="curriculum" class="py-16 sm:py-24 bg-sky-muted fade-in">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-navy-800 mb-3">
+          3주 집중 커리큘럼
+        </h2>
+        <p class="text-navy-400 text-base">체계적인 3단계로 실력을 끌어올립니다</p>
+      </div>
+
+      <div class="space-y-5">
+        <!-- Week 1 -->
+        <div class="week-card bg-white rounded-2xl p-6 sm:p-8 card-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-navy-600 text-white flex items-center justify-center font-bold text-sm">W1</div>
+            <div>
+              <h3 class="font-bold text-navy-800 text-lg">진단 + 기초 잡기</h3>
+              <p class="text-navy-400 text-sm">Week 1</p>
+            </div>
+          </div>
+          <ul class="space-y-2 text-gray-600 text-sm pl-1">
+            <li class="flex items-start gap-2"><span class="text-sky-accent">·</span> 실력 진단 (유형별 문항 진단표)</li>
+            <li class="flex items-start gap-2"><span class="text-sky-accent">·</span> 약점 파악 + 영역별 공부 계획</li>
+          </ul>
+        </div>
+
+        <!-- Week 2 -->
+        <div class="week-card bg-white rounded-2xl p-6 sm:p-8 card-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-sky-accent text-white flex items-center justify-center font-bold text-sm">W2</div>
+            <div>
+              <h3 class="font-bold text-navy-800 text-lg">실전 연습</h3>
+              <p class="text-navy-400 text-sm">Week 2</p>
+            </div>
+          </div>
+          <ul class="space-y-2 text-gray-600 text-sm pl-1">
+            <li class="flex items-start gap-2"><span class="text-sky-accent">·</span> 6일 모의고사 + 1일 오답 분석</li>
+            <li class="flex items-start gap-2"><span class="text-sky-accent">·</span> 개인 맞춤 학습 → 취약 유형 보완</li>
+          </ul>
+        </div>
+
+        <!-- Week 3 -->
+        <div class="week-card bg-white rounded-2xl p-6 sm:p-8 card-shadow">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-12 h-12 rounded-xl bg-navy-800 text-white flex items-center justify-center font-bold text-sm">W3</div>
+            <div>
+              <h3 class="font-bold text-navy-800 text-lg">실전 완성</h3>
+              <p class="text-navy-400 text-sm">Week 3</p>
+            </div>
+          </div>
+          <ul class="space-y-2 text-gray-600 text-sm pl-1">
+            <li class="flex items-start gap-2"><span class="text-sky-accent">·</span> 6일 모의고사 + 1일 오답 분석</li>
+            <li class="flex items-start gap-2"><span class="text-sky-accent">·</span> 더챕터인 모의고사 + 해설강의</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <section class="py-16 sm:py-24 bg-white fade-in">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold text-navy-800 mb-3">
+          모집 일정
+        </h2>
+      </div>
+
+      <div class="bg-sky-muted rounded-2xl overflow-hidden card-shadow">
+        <div class="schedule-row flex items-center justify-between px-6 py-5 border-b border-navy-100/40">
+          <div class="flex items-center gap-3">
+            <div class="w-3 h-3 rounded-full bg-sky-accent badge-pulse"></div>
+            <span class="font-semibold text-navy-700">사전 모집</span>
+          </div>
+          <span class="text-navy-600 font-medium text-sm sm:text-base">2월 18일(수) ~ 3월 3일(화)</span>
+        </div>
+        <div class="schedule-row flex items-center justify-between px-6 py-5 border-b border-navy-100/40">
+          <div class="flex items-center gap-3">
+            <div class="w-3 h-3 rounded-full bg-navy-400"></div>
+            <span class="font-semibold text-navy-700">정식 모집</span>
+          </div>
+          <span class="text-navy-600 font-medium text-sm sm:text-base">3월 4일(수)</span>
+        </div>
+        <div class="schedule-row flex items-center justify-between px-6 py-5 border-b border-navy-100/40">
+          <div class="flex items-center gap-3">
+            <div class="w-3 h-3 rounded-full bg-navy-300"></div>
+            <span class="font-semibold text-navy-700">오리엔테이션</span>
+          </div>
+          <span class="text-navy-600 font-medium text-sm sm:text-base">3월 8일(일)</span>
+        </div>
+        <div class="schedule-row flex items-center justify-between px-6 py-5">
+          <div class="flex items-center gap-3">
+            <div class="w-3 h-3 rounded-full bg-navy-600"></div>
+            <span class="font-semibold text-navy-700">스터디 시작</span>
+          </div>
+          <span class="text-navy-600 font-medium text-sm sm:text-base">3월 9일(월)</span>
+        </div>
+      </div>
+
+      <p class="text-center text-navy-400 text-sm mt-4">
+        ⚠️ 인원이 제한되어 있으며, 매 기수 빠르게 마감됩니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="py-16 sm:py-24 bg-sky-muted fade-in">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl sm:text-3xl font-bold text-navy-800 mb-3">
+          수강료
+        </h2>
+      </div>
+
+      <div class="bg-white rounded-3xl p-8 sm:p-10 card-shadow text-center">
+        <!-- Price -->
+        <div class="mb-6">
+          <div class="text-5xl sm:text-6xl font-extrabold text-navy-800 mb-2">
+            299,000<span class="text-2xl sm:text-3xl font-bold text-navy-500">원</span>
+          </div>
+          <p class="text-navy-400 text-sm">
+            한 달 취업 앞당기기 = 최소 300~400만원, 그 가치의 <strong class="text-navy-600">10% 미만</strong> 투자
+          </p>
+        </div>
+
+        <!-- Included summary -->
+        <div class="bg-sky-muted rounded-xl p-5 mb-8 text-left">
+          <p class="font-semibold text-navy-700 text-sm mb-3">포함 내역</p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-600">
+            <span class="flex items-center gap-1.5"><span class="text-sky-accent">✓</span> 개인별 진단 & 커리큘럼</span>
+            <span class="flex items-center gap-1.5"><span class="text-sky-accent">✓</span> 매일 1:1 피드백</span>
+            <span class="flex items-center gap-1.5"><span class="text-sky-accent">✓</span> 실전 모의고사</span>
+            <span class="flex items-center gap-1.5"><span class="text-sky-accent">✓</span> 91강 VOD</span>
+            <span class="flex items-center gap-1.5"><span class="text-sky-accent">✓</span> 학습지 & 진단표</span>
+            <span class="flex items-center gap-1.5"><span class="text-sky-accent">✓</span> 마인드 & 동기부여</span>
+          </div>
+        </div>
+
+        <!-- Discount / Bonus -->
+        <div class="space-y-3 mb-8 text-left">
+          <p class="font-semibold text-navy-700 text-sm">할인 혜택</p>
+          <div class="flex items-start gap-3 bg-gold-400/10 rounded-xl p-4">
+            <span class="text-gold-500 text-lg">🎁</span>
+            <div>
+              <p class="text-navy-700 font-medium text-sm">전자책 20% 할인</p>
+              <p class="text-navy-400 text-xs">GSAT/SKCT 통합편 <span class="line-through">53,000원</span> → <strong class="text-navy-600">43,000원</strong></p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3 bg-gold-400/10 rounded-xl p-4">
+            <span class="text-gold-500 text-lg">🔄</span>
+            <div>
+              <p class="text-navy-700 font-medium text-sm">기존 VOD 구매자</p>
+              <p class="text-navy-400 text-xs">결제 취소 후 스터디 전환 가능</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <a href="https://geekus.kr/thechapterin/classroom/409" target="_blank"
+           class="btn-primary inline-block w-full text-white text-lg font-bold px-10 py-4 rounded-xl">
+          올인뿌 9기 신청하기
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preparation Note -->
+  <section class="py-12 sm:py-16 bg-white fade-in">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="bg-navy-50 rounded-2xl p-6 sm:p-8 border border-navy-100">
+        <div class="flex items-start gap-3">
+          <span class="text-xl mt-0.5">💡</span>
+          <div>
+            <h3 class="font-bold text-navy-800 mb-2">사전 준비 안내</h3>
+            <p class="text-navy-600 text-sm leading-relaxed">
+              처음이신 분은 기본서 1권을 먼저 풀고 참여해주세요.
+            </p>
+            <div class="mt-3 space-y-1 text-sm text-navy-500">
+              <p>· <strong>GSAT</strong>: 해커스 파랑이</p>
+              <p>· <strong>SKCT</strong>: 에듀윌</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-16 sm:py-24 bg-gradient-to-b from-navy-800 to-navy-900 text-white fade-in">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold mb-4">
+        3주 후, 행복한 웃음을 짓고 싶다면
+      </h2>
+      <p class="text-navy-200 text-base sm:text-lg mb-8 leading-relaxed">
+        출제위원 현직자의 1:1 맞춤 코칭으로<br>
+        당신의 인적성 점수를 끌어올려 드립니다.
+      </p>
+
+      <a href="https://geekus.kr/thechapterin/classroom/409" target="_blank"
+         class="inline-block w-full sm:w-auto bg-white text-navy-800 text-lg font-bold px-12 py-4 rounded-xl hover:bg-navy-50 focus:outline-none focus:ring-2 focus:ring-white/50 active:scale-[0.98] transition-all duration-200">
+        올인뿌 9기 신청하기 →
+      </a>
+
+      <p class="mt-6 text-navy-300 text-sm">
+        사전 모집 기간: 2월 18일 ~ 3월 3일
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-navy-900 text-navy-400 text-center text-xs">
+    <div class="max-w-4xl mx-auto px-4">
+      <p>&copy; 2026 더챕터인적성. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
